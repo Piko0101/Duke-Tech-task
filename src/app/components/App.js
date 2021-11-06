@@ -1,10 +1,11 @@
 import React from 'react'
 import '../styles/App.scss'
+import Button from './shared/Button'
 
 function App() {
     return (
         <div>
-            <h1>Hello world</h1>
+            <Button />
         </div>
     )
 }
