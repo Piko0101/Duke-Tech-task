@@ -1,6 +1,7 @@
 import React from 'react'
 import '../styles/App.scss'
 import Button from './shared/Button'
+import SearchInput from './shared/SearchInput'
 
 function App() {
 
@@ -9,7 +10,7 @@ function App() {
     }
     return (
         <div>
-            
+            <SearchInput />
         </div>
     )
 }
