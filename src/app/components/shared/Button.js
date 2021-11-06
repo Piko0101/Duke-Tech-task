@@ -1,9 +1,10 @@
 import React from 'react'
+import '../../styles/Button.scss'
 
-function Button({children, onClick, className}) {
+function Button(props) {
     return (
-        <button className={`button button-${className}`} onClick={onClick} >
-            {children}
+        <button className={`button ${props.className}`} onClick={props.onClick} disabled={props.disabled}>
+            {props.children} 
         </button>
     )
 }

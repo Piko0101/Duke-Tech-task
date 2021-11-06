@@ -1,6 +1,7 @@
-$color: red;
+$main-font: 'Merriweather', serif;
 
-h1 {
-    color: $color;
-    text-align: center;
+
+* {
+    box-sizing: border-box;
+    font-family: $main-font;
 }
