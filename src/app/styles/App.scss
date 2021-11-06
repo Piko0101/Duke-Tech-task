@@ -1,12 +1,13 @@
-$main-font: 'Merriweather', serif;
-
+$main-font: "Merriweather", serif;
+$main-color: #343030;
 
 * {
-    box-sizing: border-box;
-    font-family: $main-font;
-    font-size: 14px;
+  box-sizing: border-box;
+  font-family: $main-font;
+  font-size: 14px;
+  color: $main-color;
 }
 
 .--flex {
-    display: flex;
+  display: flex;
 }

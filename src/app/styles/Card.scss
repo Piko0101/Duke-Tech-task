@@ -1,0 +1,29 @@
+.card {
+    border: 1px solid #E1E1E1;
+    width: 280px;
+    height: 328px;
+    &__image {
+        img {
+            height: 160px;
+            width: 100%;
+        }
+    }
+    &__info {
+        padding: 24px;
+    }
+    &__actions {
+        justify-content: space-between;
+    }
+    &__price {
+        flex-direction: column;
+        justify-content: center;
+        &-previous {
+            color: #A0A0A0;
+            text-decoration: line-through;
+        }
+        &-current {
+            font-size: 16px;
+            font-weight: 700;
+        }
+    }
+}
