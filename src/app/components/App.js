@@ -1,17 +1,19 @@
 import React from "react";
 import "../styles/App.scss";
+import Footer from "./Footer";
 import Header from "./Header";
 import Main from "./Main";
-import Card from "./shared/Card";
+import '../styles/App.scss'
 
 function App() {
   const onClick = () => {
     alert("you clicked");
   };
   return (
-    <div>
+    <div className="app">
       <Header />
       <Main />
+      <Footer/>
     </div>
   );
 }

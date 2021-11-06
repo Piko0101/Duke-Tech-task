@@ -7,6 +7,7 @@ $placeholder-color: #9f9f9f;
     float: left;
     border: 1px solid #e1e1e1;
     padding: 13px 16px;
+    background-color:#f3f1f1 ;
     &::placeholder {
       color: $placeholder-color;
     }

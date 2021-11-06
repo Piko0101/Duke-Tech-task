@@ -7,6 +7,19 @@ $main-color: #343030;
   font-size: 14px;
   color: $main-color;
 }
+body {
+  background-color: #f6f3f3;
+  margin: 0;
+}
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+}
+.container {
+    padding: 24px 200px;
+}
 
 .--flex {
   display: flex;

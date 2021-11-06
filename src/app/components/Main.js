@@ -37,8 +37,8 @@ const galeryData = [
     image: "../images/image4",
     name: "«Урок анатомии»  Рембрандт",
     price: {
-      currentPrice: "1 000 000 $",
-      previousPrice: "2 000 000 $",
+      currentPrice: "",
+      previousPrice: "",
     },
     inStock: false,
     key: 4,
@@ -47,7 +47,7 @@ const galeryData = [
 
 function Main() {
   return (
-    <div className="main">
+    <div className="main container">
       <h1>Картины эпохи Возрождения </h1>
       <div className="main__content --flex">
         {galeryData.map((galery) => {
@@ -58,6 +58,7 @@ function Main() {
               previousPrice={galery.price.previousPrice}
               currentPrice={galery.price.currentPrice}
               key={galery.key}
+              inStock={galery.inStock}
             />
           );
         })}

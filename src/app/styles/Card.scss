@@ -27,3 +27,11 @@
         }
     }
 }
+.unavailable {
+    opacity: 0.5;
+    &-text {
+        font-size: 16px;
+        font-weight: 700;
+        margin-top: 45px;
+    }
+}
