@@ -1,10 +1,14 @@
 import React from "react";
 import Card from "./shared/Card";
+import image1 from "../images/image1.png";
+import image2 from "../images/image2.png";
+import image3 from "../images/image3.png";
+import image4 from "../images/image4.png";
 import "../styles/Main.scss";
 
 const galeryData = [
   {
-    image: "../images/image1",
+    image: image1,
     name: "«Рождение Венеры» Сандро Боттичелли",
     price: {
       currentPrice: "1 000 000 $",
@@ -14,7 +18,7 @@ const galeryData = [
     key: 1,
   },
   {
-    image: "../images/image2",
+    image: image2,
     name: "«Тайная вечеря»  Леонардо да Винчи",
     price: {
       currentPrice: "3 000 000 $",
@@ -24,7 +28,7 @@ const galeryData = [
     key: 2,
   },
   {
-    image: "../images/image3",
+    image: image3,
     name: "«Сотворение Адама» Микеланджело",
     price: {
       currentPrice: "5 000 000 $",
@@ -34,7 +38,7 @@ const galeryData = [
     key: 3,
   },
   {
-    image: "../images/image4",
+    image: image4,
     name: "«Урок анатомии»  Рембрандт",
     price: {
       currentPrice: "",

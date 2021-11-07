@@ -1,11 +1,12 @@
 import React from "react";
+import logo from "../../images/logo.png"
 import '../../styles/Navbar.scss'
 
 function Navbar() {
   return (
     <div className="navbar --flex">
       <div className="navbar__logo">
-        <img src="./logo.png" />
+        <img src={logo} />
       </div>
       <ul className="navbar__links --flex">
         <li>Каталог</li>
