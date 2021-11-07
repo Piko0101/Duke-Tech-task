@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Card from "./shared/Card";
 import image1 from "../images/image1.png";
 import image2 from "../images/image2.png";
 import image3 from "../images/image3.png";
 import image4 from "../images/image4.png";
 import "../styles/Main.scss";
+import axios from "axios";
 
 const galeryData = [
   {
@@ -16,6 +17,8 @@ const galeryData = [
     },
     inStock: true,
     key: 1,
+    inCart: false,
+    isLoading: false,
   },
   {
     image: image2,
@@ -26,6 +29,7 @@ const galeryData = [
     },
     inStock: true,
     key: 2,
+    inCart: false,
   },
   {
     image: image3,
@@ -36,6 +40,7 @@ const galeryData = [
     },
     inStock: true,
     key: 3,
+    inCart: false,
   },
   {
     image: image4,
@@ -46,23 +51,44 @@ const galeryData = [
     },
     inStock: false,
     key: 4,
+    inCart: false,
   },
 ];
 
 function Main() {
+ 
+  const [data, setData] = useState(galeryData);
+  const addToCartHandler = (product) => {
+      fetch("https://reqres.in/api/products/3")
+        .then((res) => {
+          console.log(res);
+          product.inCart = true;
+          const newData = [...data];
+          for (let key in data) {
+            if (product.key === key) {
+              newData.push(product);
+            }
+          }
+          setData(newData);
+        })
+  };
+
   return (
     <div className="main container">
       <h1>Картины эпохи Возрождения </h1>
       <div className="main__content --flex">
-        {galeryData.map((galery) => {
+        {data.map((product) => {
           return (
             <Card
-              image={galery.image}
-              name={galery.name}
-              previousPrice={galery.price.previousPrice}
-              currentPrice={galery.price.currentPrice}
-              key={galery.key}
-              inStock={galery.inStock}
+              image={product.image}
+              name={product.name}
+              previousPrice={product.price.previousPrice}
+              currentPrice={product.price.currentPrice}
+              key={product.key}
+              inStock={product.inStock}
+              onClick={addToCartHandler}
+              product={product}
+              inCart={product.inCart}
             />
           );
         })}
