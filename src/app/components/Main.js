@@ -56,22 +56,31 @@ const galeryData = [
 ];
 
 function Main() {
- 
   const [data, setData] = useState(galeryData);
   const addToCartHandler = (product) => {
-      fetch("https://reqres.in/api/products/3")
-        .then((res) => {
-          console.log(res);
-          product.inCart = true;
-          const newData = [...data];
-          for (let key in data) {
-            if (product.key === key) {
-              newData.push(product);
-            }
-          }
-          setData(newData);
-        })
+    fetch("https://reqres.in/api/products/3").then((res) => {
+      console.log(res);
+      product.inCart = true;
+      const newData = [...data];
+      for (let key in data) {
+        if (product.key === key) {
+          newData.push(product);
+        }
+      }
+      setData(newData);
+    });
   };
+
+  useEffect(() => {
+    const myData = localStorage.getItem("my-data");
+    if (myData) {
+      setData(JSON.parse(myData));
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("my-data", JSON.stringify(data));
+  });
 
   return (
     <div className="main container">
