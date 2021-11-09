@@ -9,6 +9,7 @@ import axios from "axios";
 
 const galeryData = [
   {
+    key: 1,
     image: image1,
     name: "«Рождение Венеры» Сандро Боттичелли",
     price: {
@@ -16,11 +17,10 @@ const galeryData = [
       previousPrice: "2 000 000 $",
     },
     inStock: true,
-    key: 1,
     inCart: false,
-    isLoading: false,
   },
   {
+    key: 2,
     image: image2,
     name: "«Тайная вечеря»  Леонардо да Винчи",
     price: {
@@ -28,10 +28,10 @@ const galeryData = [
       previousPrice: "",
     },
     inStock: true,
-    key: 2,
     inCart: false,
   },
   {
+    key: 3,
     image: image3,
     name: "«Сотворение Адама» Микеланджело",
     price: {
@@ -39,10 +39,10 @@ const galeryData = [
       previousPrice: "6 000 000 $",
     },
     inStock: true,
-    key: 3,
     inCart: false,
   },
   {
+    key: 4,
     image: image4,
     name: "«Урок анатомии»  Рембрандт",
     price: {
@@ -50,7 +50,6 @@ const galeryData = [
       previousPrice: "",
     },
     inStock: false,
-    key: 4,
     inCart: false,
   },
 ];
